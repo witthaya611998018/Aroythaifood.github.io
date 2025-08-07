@@ -1,10 +1,15 @@
-name: React + Vite + TypeScript CI
+name: Build, Test and Deploy to GitHub Pages
 
 on:
   push:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   build:
@@ -34,6 +39,12 @@ jobs:
 
     - name: Run unit tests
       run: npx vitest run --passWithNoTests
+
+    - name: Upload build artifacts
+      uses: actions/upload-pages-artifact@v2
+      with:
+        path: dist
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
