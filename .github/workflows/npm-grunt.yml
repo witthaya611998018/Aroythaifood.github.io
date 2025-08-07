@@ -25,4 +25,5 @@ jobs:
     - name: Build
       run: |
         npm install
-        grunt
+    - name: Run unit tests
+      run: npx vitest run
