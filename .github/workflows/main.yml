@@ -26,9 +26,6 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Install Vitest
-      run: npm install --save-dev vitest
-
     - name: Lint code
       run: npm run lint
 
