@@ -42,43 +42,43 @@
         "name": "Yum Woon Sen (Spicy Glass Noodle Salad)",
         "price": 15,
         "desc": "A zesty Thai salad made with glass noodles, minced pork, shrimp, fresh herbs, chili, and lime — light, spicy, and full of flavor",
-        "img": "../../src/assets/imgs/menu/Glass_noodle_salad.jpg"
+        "img": "/Aroythaifood.github.io/menu/imgs/Glass_noodle_salad.jpg"
       },
       {
         "name": "Stir-Fried Kale with Garlic (Pad Kana)",
         "price": 15,
         "desc": "Stir-fried Chinese kale with crispy pork belly in savory soy-garlic sauce — a Thai comfort favorite.",
-        "img": "../../src/assets/imgs/menu/fried_kale_with_crispy.jpg"
+        "img": "/Aroythaifood.github.io/menu/imgs/fried_kale_with_crispy.jpg"
       },
       {
         "name": "Crispy Pork Belly (Moo Krob)",
         "price": 15,
         "desc": "Juicy pork belly with crispy crackling skin, deep-fried to golden perfection — crunchy outside, tender inside.",
-        "img": "../../src/assets/imgs/menu/Crispy_Pork.jpg"
+        "img": "/Aroythaifood.github.io/menu/imgs/Crispy_Pork.jpg"
       },
       {
         "name": "Thai Spring Rolls (Por Pia Tod)",
         "price": 15,
         "desc": "Crispy golden spring rolls filled with mixed vegetables and glass noodles, served with sweet chili dipping sauce.",
-        "img": "../../src/assets/imgs/menu/Spring_rolls.jpg"
+        "img": "/Aroythaifood.github.io/menu/imgs/Spring_rolls.jpg"
       },
       {
         "name": "Tom Yum Noodle Soup (Kuay Tiew Tom Yum)",
         "price": 15,
         "desc": "A spicy and tangy Thai noodle soup with minced pork, fish balls, ground peanuts, lime juice, and chili — bold flavors in every bite",
-        "img": "../../src/assets/imgs/menu/Tom_Yum_Noodle_Soup.jpg"
+        "img": "/Aroythaifood.github.io/menu/imgs/Tom_Yum_Noodle_Soup.jpg"
       },
       {
         "name": "Pad Krapow Gai (Spicy Basil Chicken)",
         "price": 15,
         "desc": "Stir-fried minced chicken with Thai holy basil, garlic, and chili — bold, aromatic, and spicy. Served with rice and a fried egg",
-        "img": "../../src/assets/imgs/menu/Pad_Krapow_Gai.jpg"
+        "img": "/Aroythaifood.github.io/menu/imgs/Pad_Krapow_Gai.jpg"
       },
       {
         "name": "fresh spring rolls healthy and delicious",
         "price": 15,
         "desc": "Fresh spring rolls are probably one of my favorite things to eat. They’re refreshing, light, and perfect for any time of the year. Each roll is filled with healthy crisp vegetables, rice noodles, chicken, seafood, and herbs. Impress family and friends with this easy and delicious appetizer",
-        "img": "../../src/assets/imgs/menu/fresh_spring_rolls_healthy_and_delicious.jpg"
+        "img": "/Aroythaifood.github.io/menu/imgs/fresh_spring_rolls_healthy_and_delicious.jpg"
       }
     ]
   }
