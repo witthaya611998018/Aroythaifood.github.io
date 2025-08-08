@@ -1,5 +1,6 @@
 // import React from "react";
-import imgs from "../../../src/assets/imgs/LOGO.ico";
+// import imgs from "../../../src/assets/imgs/LOGO.ico";
+import imgs from "../../../public/menu/imgs/LOGO.ico";
 
 // import logo from ""
 const Login = () => {
