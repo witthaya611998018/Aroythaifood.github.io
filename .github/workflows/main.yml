@@ -1,15 +1,10 @@
-name: Build, Test and Deploy to GitHub Pages
+name: React + Vite + TypeScript CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+    branches: ["main"]
 
 jobs:
   build:
@@ -20,42 +15,29 @@ jobs:
         node-version: [18.x, 20.x, 22.x]
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v4
-      with:
-        node-version: ${{ matrix.node-version }}
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
 
-    - name: Install dependencies
-      run: npm install
+      - name: Install dependencies
+        run: npm ci
 
-    - name: Lint code
-      run: npm run lint
+      - name: Lint code
+        run: npm run lint
 
-    - name: Type check and Build project
-      run: npm run build
+      - name: Type check and Build project
+        run: npm run build
 
-    - name: Run unit tests
-      run: npx vitest run --passWithNoTests
+      - name: Run unit tests with Vitest
+        run: npx vitest run --passWithNoTests
 
-    - name: Upload build artifacts
-      uses: actions/upload-pages-artifact@v3
-      with:
-        path: dist
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-    - name: Upload build artifacts
-      if: success()
-      uses: actions/upload-pages-artifact@v3
-      with:
-        name: github-pages-${{ github.run_id }}
-        path: dist
-
+      - name: Upload build artifacts
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # ทำให้ชื่อไม่ซ้ำกันในแต่ละ run
+          name: github-pages-${{ github.run_id }}
+          path: dist
