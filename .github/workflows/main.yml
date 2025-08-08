@@ -6,7 +6,6 @@ on:
   pull_request:
     branches: ["main"]
 
-# สิทธิ์ที่ต้องใช้สำหรับ Deploy GitHub Pages
 permissions:
   contents: read
   pages: write
@@ -16,18 +15,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [18.x, 20.x, 22.x]
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Use Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 20
 
       - name: Install dependencies
         run: npm ci
@@ -41,10 +36,17 @@ jobs:
       - name: Run unit tests with Vitest
         run: npx vitest run --passWithNoTests
 
+      # ✅ เก็บ build ไว้โหลด debug
+      - name: Upload build artifact for debugging
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-dist
+          path: dist
+
+      # ✅ Artifact สำหรับ GitHub Pages
       - name: Upload build artifact for GitHub Pages
         uses: actions/upload-pages-artifact@v3
         with:
-          name: github-pages-${{ github.run_id }}
           path: dist
 
   deploy:
@@ -54,8 +56,23 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      # ✅ ติดตั้ง GitHub CLI เพื่อใช้สั่งเปิด Pages
+      - name: Install GitHub CLI
+        run: sudo apt-get install gh -y
+
+      # ✅ เปิด GitHub Pages (branch main, path root)
+      - name: Enable GitHub Pages
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api \
+            --method POST \
+            -H "Accept: application/vnd.github+json" \
+            /repos/${{ github.repository }}/pages \
+            -f "source[branch]=main" \
+            -f "source[path]='/'" || echo "Pages already enabled"
+
+      # ✅ Deploy
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        with:
-          artifact_name: github-pages-${{ github.run_id }}
