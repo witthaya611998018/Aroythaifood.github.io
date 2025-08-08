@@ -1,5 +1,5 @@
 import menuData from "../../../public/menu/menu.json";
-import imgs from "../../../src/assets/imgs/pad_khapao.png";
+import imgs from "../../../public/menu/imgs/pad_khapao.png";
 
 // const sidebarMenus = [
 //   "Paii The Experience",
