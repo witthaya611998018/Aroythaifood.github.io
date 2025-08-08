@@ -6,79 +6,79 @@
         "name": "Pad Thai",
         "price": 15,
         "desc": "Classic Thai stir-fried rice noodles in tamarind sauce, served with tofu, bean sprouts, peanuts, and lime. Add shrimp, egg, or enjoy vegetarian style",
-        "img": "../../src/assets/imgs/menu/Pad_Thai.jpg"
+        "img": "${import.meta.env.BASE_URL}/src/assets/imgs/menu/Pad_Thai.jpg"
       },
       {
         "name": "Som Tum (Papaya Salad)",
         "price": 15,
         "desc": "A spicy Thai salad made with shredded green papaya, lime juice, chilies, garlic, and peanuts — fresh, tangy, and full of flavor",
-        "img": "../../src/assets/imgs/menu/papaya_salad.jpg"
+        "img": "${import.meta.env.BASE_URL}/src/assets/imgs/menu/papaya_salad.jpg"
       },
       {
         "name": "Mango Sticky Rice",
         "price": 15,
         "desc": "Sweet sticky rice topped with ripe mango and rich coconut cream — Thailand’s beloved tropical dessert",
-        "img": "../../src/assets/imgs/menu/Mango_Sticky_Rice.jpg"
+        "img": "${import.meta.env.BASE_URL}/src/assets/imgs/menu/Mango_Sticky_Rice.jpg"
       },
       {
         "name": "Tom Yum Goong",
         "price": 15,
         "desc": "Spicy and sour shrimp soup infused with lemongrass, galangal, kaffir lime leaves, and chili — bold, aromatic, and refreshing",
-        "img": "../../src/assets/imgs/menu/spicy_prawn_soup.jpg"
+        "img": "${import.meta.env.BASE_URL}/src/assets/imgs/menu/spicy_prawn_soup.jpg"
       },
       {
         "name": "Thai Fried Rice",
         "price": 15,
         "desc": "Fragrant jasmine rice stir-fried with egg, garlic, onions, and your choice of protein — simple, tasty, and satisfying",
-        "img": "../../src/assets/imgs/menu/Thai_fried_rice.jpg"
+        "img": "${import.meta.env.BASE_URL}/src/assets/imgs/menu/Thai_fried_rice.jpg"
       },
       {
         "name": "Green Curry (Gaeng Keow Wan)",
         "price": 15,
         "desc": "A rich and creamy Thai green curry made with coconut milk, green chili paste, Thai herbs, and your choice of meat or vegetables",
-        "img": "../../src/assets/imgs/menu/green_curry.jpg"
+        "img": "${import.meta.env.BASE_URL}/src/assets/imgs/menu/green_curry.jpg"
       },
       {
         "name": "Yum Woon Sen (Spicy Glass Noodle Salad)",
         "price": 15,
         "desc": "A zesty Thai salad made with glass noodles, minced pork, shrimp, fresh herbs, chili, and lime — light, spicy, and full of flavor",
-        "img": "../../src/assets/imgs/menu/Glass_noodle_salad.jpg"
+        "img": "${import.meta.env.BASE_URL}/src/assets/imgs/menu/Glass_noodle_salad.jpg"
       },
       {
         "name": "Stir-Fried Kale with Garlic (Pad Kana)",
         "price": 15,
         "desc": "Stir-fried Chinese kale with crispy pork belly in savory soy-garlic sauce — a Thai comfort favorite.",
-        "img": "../../src/assets/imgs/menu/fried_kale_with_crispy.jpg"
+        "img": "${import.meta.env.BASE_URL}/src/assets/imgs/menu/fried_kale_with_crispy.jpg"
       },
       {
         "name": "Crispy Pork Belly (Moo Krob)",
         "price": 15,
         "desc": "Juicy pork belly with crispy crackling skin, deep-fried to golden perfection — crunchy outside, tender inside.",
-        "img": "../../src/assets/imgs/menu/Crispy_Pork.jpg"
+        "img": "${import.meta.env.BASE_URL}/src/assets/imgs/menu/Crispy_Pork.jpg"
       },
       {
         "name": "Thai Spring Rolls (Por Pia Tod)",
         "price": 15,
         "desc": "Crispy golden spring rolls filled with mixed vegetables and glass noodles, served with sweet chili dipping sauce.",
-        "img": "../../src/assets/imgs/menu/Spring_rolls.jpg"
+        "img": "${import.meta.env.BASE_URL}/src/assets/imgs/menu/Spring_rolls.jpg"
       },
       {
         "name": "Tom Yum Noodle Soup (Kuay Tiew Tom Yum)",
         "price": 15,
         "desc": "A spicy and tangy Thai noodle soup with minced pork, fish balls, ground peanuts, lime juice, and chili — bold flavors in every bite",
-        "img": "../../src/assets/imgs/menu/Tom_Yum_Noodle_Soup.jpg"
+        "img": "${import.meta.env.BASE_URL}/src/assets/imgs/menu/Tom_Yum_Noodle_Soup.jpg"
       },
       {
         "name": "Pad Krapow Gai (Spicy Basil Chicken)",
         "price": 15,
         "desc": "Stir-fried minced chicken with Thai holy basil, garlic, and chili — bold, aromatic, and spicy. Served with rice and a fried egg",
-        "img": "../../src/assets/imgs/menu/Pad_Krapow_Gai.jpg"
+        "img": "${import.meta.env.BASE_URL}/src/assets/imgs/menu/Pad_Krapow_Gai.jpg"
       },
       {
         "name": "fresh spring rolls healthy and delicious",
         "price": 15,
         "desc": "Fresh spring rolls are probably one of my favorite things to eat. They’re refreshing, light, and perfect for any time of the year. Each roll is filled with healthy crisp vegetables, rice noodles, chicken, seafood, and herbs. Impress family and friends with this easy and delicious appetizer",
-        "img": "../../src/assets/imgs/menu/fresh_spring_rolls_healthy_and_delicious.jpg"
+        "img": "${import.meta.env.BASE_URL}/src/assets/imgs/menu/fresh_spring_rolls_healthy_and_delicious.jpg"
       }
     ]
   }
