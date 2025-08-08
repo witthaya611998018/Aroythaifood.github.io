@@ -33,17 +33,18 @@ jobs:
       - name: Type check and Build project
         run: npm run build
 
+      - name: Create .nojekyll file
+        run: echo "" > dist/.nojekyll
+
       - name: Run unit tests with Vitest
         run: npx vitest run --passWithNoTests
 
-      # ✅ เก็บ build ไว้โหลด debug
       - name: Upload build artifact for debugging
         uses: actions/upload-artifact@v4
         with:
           name: build-dist
           path: dist
 
-      # ✅ Artifact สำหรับ GitHub Pages
       - name: Upload build artifact for GitHub Pages
         uses: actions/upload-pages-artifact@v3
         with:
@@ -56,11 +57,9 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      # ✅ ติดตั้ง GitHub CLI เพื่อใช้สั่งเปิด Pages
       - name: Install GitHub CLI
         run: sudo apt-get install gh -y
 
-      # ✅ เปิด GitHub Pages (branch main, path root)
       - name: Enable GitHub Pages
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -72,7 +71,6 @@ jobs:
             -f "source[branch]=main" \
             -f "source[path]='/'" || echo "Pages already enabled"
 
-      # ✅ Deploy
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
