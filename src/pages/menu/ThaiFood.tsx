@@ -17,7 +17,7 @@ export default function Thaifood() {
         style={{ backgroundImage: `url(${imgs})` }}
       >
         <div className="flex justify-center  text-4xl px-1 py-1 md:text-8xl text-[#fff] font-normal drop-shadow-lg">
-          Menus ThaiFood
+          Menus ThaiFood test 
         </div>
       </div>
       <div className=" max-w-6xl mx-auto w-full px-4 md:px-8 py-8">
