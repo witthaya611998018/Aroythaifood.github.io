@@ -4,7 +4,7 @@
 const Footer = () => {
   return (
     // <footer className="bg-gradient-to-t from-[#d0f79e] to-[#f8f7e7] py-10 mt-8">
-    <footer className="bg-[#1c2d56] py-10 mt-8 relative text-white">
+    <footer className="bg-[#1c2d56] py-5 mt-5 relative text-white md:p-8" id="contact">
       <div className="max-w-6xl mx-auto px-4 py-2 flex flex-col md:flex-row gap-8 md:gap-16">
         <div className="flex-1">
           <div className="text-sm leading-relaxed">
@@ -12,7 +12,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row gap-8 md:gap-16">
+      <div className="max-w-6xl mx-auto px-4 flex flex-col gap-5 md:flex-row  md:gap-16">
         <div className="flex-1">
           <b className="block mb-2">CONTACT US</b>
           <div className="text-sm leading-relaxed">
