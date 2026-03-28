@@ -38,7 +38,7 @@ export default function Thaifood() {
                 {section.items.map((item) => (
                   <div
                     key={item.name}
-                    className="bg-[#f4f4f475] rounded-3xl shadow-md overflow-hidden flex flex-col h-full transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-[1.02]"
+                    className="bg-[#f4f4f475] rounded-3xl shadow-md overflow-hidden flex flex-col h-full transition delay-100 duration-350 ease-in-out hover:-translate-y-1 hover:scale-[1.02]"
                   >
                     <div className="relative">
                       <img
