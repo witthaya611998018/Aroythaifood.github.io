@@ -1,40 +1,87 @@
-const Header = () => {
-  return (
-    // <header className="flex justify-between items-center px-12 py-8 bg-[#c8d7b5]">
-    // <header className="flex justify-between items-center px-12 py-8 bg-white">
-    // <header className="flex justify-between items-center px-12 py-8 bg-gradient-to-b from-[#d0f79e] to-[#f8f7e7]">
+import { useState } from "react";
 
-    <header className="flex flex-col md:flex-row justify-between items-center px-4 md:px-40 py-5  bg-[#fff]">
-      <div className="text-2xl md:text-3xl font-bold tracking-widest flex items-center mb-4 md:mb-0">
-        <span className="text-[#efd62e] font-sans px-1">A ROY</span>
-        <span className="ml-2">THAIFOOD</span>
+const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  //  function to smoothly scroll to a section by id
+  const smoothScrollTo = (id: string, duration = 700) => {
+    const targetEl = document.getElementById(id);
+    if (!targetEl) return;
+
+    const startY = window.pageYOffset;
+    const targetY = targetEl.getBoundingClientRect().top + startY;
+    const distance = targetY - startY;
+    let startTime: number | null = null;
+
+    const easeInOut = (t: number) =>
+      t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+
+    const step = (timestamp: number) => {
+      if (startTime === null) startTime = timestamp;
+      const progress = Math.min(1, (timestamp - startTime) / duration);
+      window.scrollTo(0, startY + distance * easeInOut(progress));
+      if (progress < 1) requestAnimationFrame(step);
+    };
+
+    requestAnimationFrame(step);
+  };
+
+  return (
+    <header className="bg-[#1f2429] text-white">
+      <div className="p-3 md:flex md:items-center md:justify-between  md:p-4 lg:px-auto max-w-7xl mx-auto">
+        <div className="flex items-center justify-between">
+          <a
+            className="flex items-center text-xl font-bold text-[#ffc107]"
+            href="#menu"
+          >
+            <i className="fas fa-utensils me-2"></i>
+            AROY THAI
+          </a>
+          <button
+            aria-label="Toggle menu"
+            aria-expanded={isOpen}
+            onClick={() => setIsOpen((v) => !v)}
+            className="p-2 border border-white/30 rounded-lg text-white/90 hover:bg-white/10 transition-colors md:hidden"
+          >
+            <svg
+              className={`w-6 h-6 transition-transform duration-500 ease-in-out ${isOpen ? "rotate-90" : "rotate-0"}`}
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              {isOpen ? (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
+        </div>
+        <div
+          className={`transition-all duration-500 ease-in-out overflow-hidden ${isOpen
+            ? "max-h-96 opacity-100 translate-y-0"
+            : "max-h-0 opacity-0 -translate-y-2 pointer-events-none"
+            } md:transition-none md:max-h-none md:opacity-100 md:translate-y-0 md:pointer-events-auto md:overflow-visible md:flex md:items-center`}
+        >
+          <nav className="grid px-1 py-3 space-y-3 text-base font-medium transition-colors [&_a]:text-white [&_a]:transition-colors [&_a:hover]:text-[#ffc107] md:space-y-0 md:px-0 md:py-0 md:flex md:gap-6 md:items-center">
+            <a href="#">HOME</a>
+            <a href="#">MENU</a>
+            <a href="#">SPECIALS</a>
+            <a
+              href="#contact"
+              onClick={(e) => {
+                e.preventDefault();
+                smoothScrollTo("contact", 800); // duration in ms
+                if (isOpen) setIsOpen(false);
+              }}
+            >
+              CONTACT
+            </a>
+            <a href="#">LOGIN</a>
+          </nav>
+        </div>
       </div>
-      <nav className="flex gap-6 ">
-        <a
-          href="#"
-          className="text-base font-medium text-[#000000cc] hover:text-[#efd62e] transition-colors"
-        >
-          HOME
-        </a>
-        <a
-          href="#"
-          className="text-base font-medium text-[#000000cc] hover:text-[#efd62e] transition-colors"
-        >
-          MENU
-        </a>
-        <a
-          href="#"
-          className="text-base font-medium text-[#000000cc] hover:text-[#efd62e] transition-colors"
-        >
-          SPECIALS
-        </a>
-        <a
-          href="#"
-          className="text-base font-medium text-[#000000cc] hover:text-[#efd62e] transition-colors"
-        >
-          CONTACT
-        </a>
-      </nav>
+
     </header>
   );
 };

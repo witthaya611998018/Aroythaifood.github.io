@@ -5,6 +5,7 @@ const AppHeader = () => {
         <div className="text-2xl md:text-3xl font-bold tracking-widest flex items-center mb-4 md:mb-0">
           <span className="text-[#efd62e] font-sans px-1">A ROY</span>
           <span className="ml-2">THAIFOOD</span>
+
         </div>
         <nav className="flex gap-6 ">
           <a
