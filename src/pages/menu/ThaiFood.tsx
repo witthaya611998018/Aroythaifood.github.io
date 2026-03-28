@@ -17,7 +17,7 @@ export default function Thaifood() {
         style={{ backgroundImage: `url(${imgs})` }}
       >
         {/* เบลอๆ รูปภาพ*/}
-        <div className="absolute inset-0 bg-black/55" aria-hidden />
+        <div className="absolute inset-0 bg-black/50" aria-hidden />
         <div className="relative z-10 flex flex-col items-center text-center gap-3 px-4 text-white drop-shadow-[0_4px_14px_rgba(0,0,0,0.65)]">
           <h1 className="font-black text-3xl leading-tight md:text-5xl lg:text-6xl">
             Order authentic Thai cuisine anytime.
