@@ -4,7 +4,7 @@ import { fileURLToPath, URL } from "node:url";
 import react from "@vitejs/plugin-react-swc";
 import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
-  base: "/Aroythaifood.github.io/",
+  base: "/",
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
