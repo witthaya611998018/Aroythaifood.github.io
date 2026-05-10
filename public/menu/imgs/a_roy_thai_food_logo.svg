@@ -1,0 +1,36 @@
+<svg viewBox="0 0 420 80" xmlns="http://www.w3.org/2000/svg" width="420" height="80">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;700&amp;display=swap');
+    </style>
+    <linearGradient id="iconGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#C9960C"/>
+      <stop offset="100%" style="stop-color:#F5C518"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Icon background: rounded square, gold gradient -->
+  <rect x="0" y="4" width="72" height="72" rx="16" ry="16" fill="url(#iconGrad)"/>
+
+  <!-- Letter "A" in white inside the icon -->
+  <text
+    x="36"
+    y="58"
+    text-anchor="middle"
+    font-family="'Google Sans', sans-serif"
+    font-size="52"
+    font-weight="700"
+    fill="white"
+  >A</text>
+
+  <!-- Brand name "A ROY THAI FOOD" -->
+  <text
+    x="90"
+    y="50"
+    font-family="'Google Sans', sans-serif"
+    font-size="28"
+    font-weight="700"
+    fill="#111111"
+    letter-spacing="0.5"
+  >A ROY THAI FOOD</text>
+</svg>
